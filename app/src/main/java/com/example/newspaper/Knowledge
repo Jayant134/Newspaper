@@ -1,0 +1,31 @@
+This project has difference from The Movies App by working with fragments instead of activities.
+1. Use of MainActivity: only used to create and set fragments instead of connection of components logic.
+    The components connection logic is inside the fragments classes.
+2. Getting application parameter in a fragment class: requireActivity().getApplication()
+2b. When observing LiveData in fragments, use getViewLifecyclerOwner() instead of requireActivity() as parameter.
+3. Getting owner class parameter in a fragment class: this (same as in an activity class)
+4. Creating viewModel instance using ViewModelProvider when AllNewsViewModel has two parameters:
+    By default, ViewModelProvider takes only application. To make it take two parameters: application and newsRepository, create a custom class named AllNewsViewModelFactory
+    Then initialize application , newsRepository, factory and then create viewModel in AllNewsFragment.
+5. Don't use DataBindingUtil.setContentView() in onViewCreated as it will destroy activity and just load fragment. But fragment lives inside activity so crash.
+    Instead use
+    fragmentAllNewsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_all_news, container, false);
+    return fragmentAllNewsBinding.getRoot();
+    these in OnCreateView only.
+6. Images if not available, I use a placeholder image in News.java
+7. write android:usesCleartextTraffic="true" in manifests so that images with http:// can also be opened. without it, only https:// loads.
+8. MainActivity: 43
+    An activity does not know which fragment/s are on top of it. To get reference to a fragement, use getSupportFragmentManager() as it is a manager of fragments.
+    findFragmentById(): pass parameter of the root layout: like frameLayout since a fragment is associated to its root level layouts.
+9. Tell the fragment that it has a menu inside onCreate of AllNewsFragement
+    put onCreateOptionsMenu() and onOptionsItemSelected() inside AllNewsFragment.
+10. Even after setting menu, it is not visible since there is no container to hold it on top of screen. Due to NoActionBar set in themes.xml
+    Add MaterialToolBar in activity_main and findViewById for toolbar in MainActivity
+
+11. Important: instead of using height = 56dp, use height = ?attr/actionBarSize. This will look in theme and set height as defined std height of actionBar. works dynamically for diff. devices.
+12. wrote setSupportActionBar(toolbar) and found view by id inside MainActivity instead of AllNewsFragment. Reason:
+    declare toolbare in mainactivity but menu ko set ko allnewsFragment hi kr rha. So ok.
+13. Use @Ignore with properties you don't want to show in room db.
+15. To get back from a fragment, use ft.addToBackStack(null); (ft is fragmentTransaction)
+16. How to send data like intents using args and startActivity(i) with fragments: see NewsItemClickHandler and newsDetails
+17. How to use webview to load urls inside app and not external browser: see newsDetails and layout for it.

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <group android:scaleX="0.77"
+      android:scaleY="0.77"
+      android:translateX="12.42"
+      android:translateY="12.42">
+
+      <!-- Newspaper body (folded top-right corner) -->
+      <path
+          android:fillColor="#FFFFFF"
+          android:pathData="M28,26 L70,26 L80,36 L80,82 L28,82 Z" />
+
+      <!-- Folded corner flap shadow -->
+      <path
+          android:fillColor="#D6D6D6"
+          android:pathData="M70,26 L80,36 L70,36 Z" />
+
+      <!-- Masthead bar (red accent) -->
+      <path
+          android:fillColor="#D32F2F"
+          android:pathData="M34,32 h36 v6 h-36 z" />
+
+      <!-- Divider under masthead -->
+      <path
+          android:fillColor="#B0BEC5"
+          android:fillAlpha="0.8"
+          android:pathData="M34,41 h36 v1.5 h-36 z" />
+
+      <!-- Photo placeholder -->
+      <path
+          android:fillColor="#0D2149"
+          android:pathData="M34,46 h16 v14 h-16 z" />
+
+      <!-- Caption lines beside photo -->
+      <path
+          android:fillColor="#607D8B"
+          android:pathData="M54,46 h16 v3 h-16 z" />
+      <path
+          android:fillColor="#607D8B"
+          android:pathData="M54,52 h16 v3 h-16 z" />
+      <path
+          android:fillColor="#607D8B"
+          android:pathData="M54,58 h12 v3 h-12 z" />
+
+      <!-- Body paragraph lines -->
+      <path
+          android:fillColor="#78909C"
+          android:pathData="M34,64 h40 v3 h-40 z" />
+      <path
+          android:fillColor="#78909C"
+          android:pathData="M34,70 h40 v3 h-40 z" />
+      <path
+          android:fillColor="#78909C"
+          android:pathData="M34,76 h30 v3 h-30 z" />
+
+  </group>
+</vector>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Newspaper</string>
+    <string name="newspaper">Newspaper</string>
+    <string name="sports">Sports</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="business">Business</string>
+    <string name="programming">Programming</string>
+    <string name="health">Health</string>
+    <string name="all_news">All News</string>
+    <string name="saved">Saved</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="technology">Technology</string>
+    <string name="politics">Politics</string>
+    <string name="saved_news">Saved news</string>
+    <string name="image_of_news">Image of news</string>
+    <string name="back_button">Back button</string>
+</resources>

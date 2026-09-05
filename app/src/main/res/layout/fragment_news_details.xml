@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/newsDetailsFrameLayout"
+    tools:context=".clickHandlers.newsDetails">
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/newsDetailLinearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/imageButtonBack"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:paddingEnd="30dp"-->
+<!--            android:contentDescription="@string/back_button"-->
+<!--            android:src="@drawable/arrow_back"-->
+<!--            android:background="@color/white" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/titleText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="This is the title of the news"-->
+<!--            android:textSize="28sp"-->
+<!--            android:fontFamily="@font/montserrat_medium"-->
+<!--            android:layout_margin="10dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/descText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="This is the description of the news you will see."-->
+<!--            android:textSize="22sp"-->
+<!--            android:fontFamily="@font/montserrat_regular"-->
+<!--            android:layout_margin="10dp"/>-->
+<!--    </LinearLayout>-->
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
